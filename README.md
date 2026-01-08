@@ -14,3 +14,5 @@ Un synthétiseur polyphonique moderne construit avec **React**, **TypeScript** e
 * **Langage** : TypeScript (Typage strict des nœuds audio et des props)
 * **Audio** : Web Audio API (Oscillators, GainNodes)
 * **Stylisation** : CSS3 (Flexbox, CSS Variables, Animations)
+
+## Réalisé grâce à mon ami Gemini
