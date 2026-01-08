@@ -1,0 +1,221 @@
+.synthesizer{
+  width: 80%;
+  margin:  50px auto;
+  padding: 20px 20px 0;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+.keyboard {
+  margin-top: 20px;
+  height: 500px;
+  display: flex;
+  position: relative;
+}
+
+.touche {
+  width: 100px;
+  border: solid black 3px;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+.black {
+  background-color: black;
+  color: white;
+  position: absolute;
+  height: 50%;
+  width: 40px;
+}
+
+
+.toolbox{
+  display: flex;
+  justify-content: space-between;
+}
+
+.gainContainer{
+  padding: 20px;
+  border : 2px solid orange;
+  box-shadow: 0 0 20px orange;
+  color: #fff;
+}
+
+.gainContainer label{
+  color: orange;
+}
+.gainContainer h1 {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', monospace;
+}
+
+.gainContainer .faderWrapper input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #282727; /* Fond très sombre */
+  border-radius: 5px;
+  outline: 2px solid orange;
+}
+
+.faderWrapper input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff; /* LE CŒUR BLANC */
+  border: 2px solid currentColor; /* Prend la couleur du texte parent */
+  border-radius: 4px; /* Un peu carré pour le look vintage */
+  cursor: pointer;
+  
+  /* L'EFFET NÉON : Blanc au centre, Couleur à l'extérieur */
+  box-shadow: 
+    0 0 5px orange,                /* Éclat interne blanc */
+    0 0 50px currentColor,       /* Halo de la couleur du bloc */
+    0 0 50px currentColor;       /* Diffusion large */
+    
+  transition: transform 0.1s ease-in-out;
+}
+
+.gainContainer .faderWrapper input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  box-shadow: 
+    0 0 8px #fff, 
+    0 0 20px currentColor, 
+    0 0 35px currentColor;
+}
+
+.shapeForm {
+  padding: 20px;
+  border : 2px solid purple;
+  width: 120px;
+  box-shadow: 0 0 20px violet;
+}
+
+.shapeForm div{
+  margin-top: 10px;
+}
+
+.shapeForm h1, .envelope h1{
+  color: white;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+}
+
+.shapeForm label {
+  font-weight: bold;
+  color: white;
+}
+
+.shapeForm input[type="radio"] {
+  display: none;
+}
+
+.shapeForm  label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
+.shapeForm label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 2px solid purple; /* Ton bleu néon */
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 5px purple;
+  transition: all 0.2s ease;
+}
+
+.shapeForm input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #fff; /* Cœur blanc ! */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 15px purple;
+}
+
+.envelope {
+  padding: 20px;
+  border : 2px solid cyan;
+  box-shadow: 0 0 20px cyan;
+}
+
+.envelope h1{
+  margin-bottom: 0px;
+}
+
+.envelope .envContainer {
+  display: flex;
+  color: #fff;
+}
+
+.envelope .envContainer .envFader{
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 140px;
+  height: 165px;
+}
+
+.envelope .envContainer .envFader .envLabel{
+  color: #00ffff;
+
+}
+
+.envelope .envContainer .faderWrapper, .gainContainer .faderWrapper{
+  transform: rotate(90deg);
+  position: relative;
+  top: 70px;
+}
+
+
+.envelope .envContainer .faderWrapper input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #282727; /* Fond très sombre */
+  border-radius: 5px;
+  outline: 2px solid cyan;
+}
+
+
+.envelope .envContainer .faderWrapper input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff; /* LE CŒUR BLANC */
+  border: 2px solid currentColor; /* Prend la couleur du texte parent */
+  border-radius: 4px; /* Un peu carré pour le look vintage */
+  cursor: pointer;
+  
+  /* L'EFFET NÉON : Blanc au centre, Couleur à l'extérieur */
+  box-shadow: 
+    0 0 5px #00ffff,                /* Éclat interne blanc */
+    0 0 50px currentColor,       /* Halo de la couleur du bloc */
+    0 0 50px currentColor;       /* Diffusion large */
+    
+  transition: transform 0.1s ease-in-out;
+}
+
+.envelope .envContainer .faderWrapper input[type="range"]::-webkit-slider-thumb:active {
+  transform: scale(1.2);
+  box-shadow: 
+    0 0 8px #fff, 
+    0 0 20px currentColor, 
+    0 0 35px currentColor;
+}
