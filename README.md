@@ -1,5 +1,5 @@
 # 🎹 Neon-Synth
-
+## Réalisé grâce à mon ami Gemini
 Un synthétiseur polyphonique moderne construit avec **React**, **TypeScript** et l'**Web Audio API**. Ce projet explore la manipulation du son en temps réel avec une interface utilisateur inspirée des designs Cyberpunk.
 
 ## ✨ Fonctionnalités
