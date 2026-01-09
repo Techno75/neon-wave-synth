@@ -39,13 +39,13 @@
 
 .gainContainer{
   padding: 20px;
-  border : 2px solid orange;
-  box-shadow: 0 0 20px orange;
+  border : 2px solid purple;
+  box-shadow: 0 0 20px purple;
   color: #fff;
 }
 
 .gainContainer label{
-  color: orange;
+  color: purple;
 }
 .gainContainer h1 {
   margin: 0;
@@ -58,7 +58,7 @@
   appearance: none;
   background: #282727; /* Fond très sombre */
   border-radius: 5px;
-  outline: 2px solid orange;
+  outline: 2px solid purple;
 }
 
 .faderWrapper input[type="range"]::-webkit-slider-thumb {
@@ -73,7 +73,7 @@
   
   /* L'EFFET NÉON : Blanc au centre, Couleur à l'extérieur */
   box-shadow: 
-    0 0 5px orange,                /* Éclat interne blanc */
+    0 0 5px purple,                /* Éclat interne blanc */
     0 0 50px currentColor,       /* Halo de la couleur du bloc */
     0 0 50px currentColor;       /* Diffusion large */
     
@@ -90,9 +90,9 @@
 
 .shapeForm {
   padding: 20px;
-  border : 2px solid purple;
+  border : 2px solid orange;
   width: 120px;
-  box-shadow: 0 0 20px violet;
+  box-shadow: 0 0 20px orange;
 }
 
 .shapeForm div{
@@ -130,10 +130,10 @@
   top: 0;
   width: 18px;
   height: 18px;
-  border: 2px solid purple; /* Ton bleu néon */
+  border: 2px solid orange; /* Ton bleu néon */
   border-radius: 50%;
   background: transparent;
-  box-shadow: 0 0 5px purple;
+  box-shadow: 0 0 5px orange;
   transition: all 0.2s ease;
 }
 
@@ -146,7 +146,7 @@
   height: 10px;
   background: #fff; /* Cœur blanc ! */
   border-radius: 50%;
-  box-shadow: 0 0 10px #fff, 0 0 15px purple;
+  box-shadow: 0 0 10px #fff, 0 0 15px orange;
 }
 
 .envelope {

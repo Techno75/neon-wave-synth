@@ -15,9 +15,9 @@ interface Props {
     attackTime: number;
     decayTime: number;
     decayGain: number;
-    sustainTime: number;
     sustainGain:number;
     releaseTime: number;
+    analyser: React.RefObject<AnalyserNode | null> ;
 }
 
 function Touche(props : Props) {
@@ -50,6 +50,7 @@ function Touche(props : Props) {
       props.decayTime,
       props.decayGain,
       props.sustainGain,
+      props.analyser
       );
       setActiveNodes(nodes);
     }}

@@ -14,7 +14,9 @@ export const playOn = (frequency : number,
         attackTime: number,
         decayTime: number,
         decayGain: number,
-        sustainGain: number,) => {
+        sustainGain: number,
+        analyser: React.RefObject<AnalyserNode | null>
+    ) => {
     const ctx = audioCtx.current;
     if (!ctx) return null;
 
@@ -34,7 +36,13 @@ export const playOn = (frequency : number,
     gainNode.gain.exponentialRampToValueAtTime(Math.max(0.0001, sustainGain), now + attackTime + decayTime);
 
     osc.connect(gainNode);
-    gainNode.connect(ctx.destination);
+    if (analyser.current) {
+        gainNode.connect(analyser.current); // Le volume va dans l'analyseur
+        analyser.current.connect(ctx.destination); // L'analyseur va vers les haut-parleurs
+    } else {
+        gainNode.connect(ctx.destination); // Secours si pas d'analyseur
+    }   
+
     osc.start();
 
     // On retourne les nœuds pour pouvoir les arrêter dans PlayOff

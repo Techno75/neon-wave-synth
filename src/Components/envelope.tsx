@@ -8,8 +8,6 @@ interface Props {
     setDecayTime: React.Dispatch<React.SetStateAction<number>>
     usedDecayGain: number;
     setDecayGain: React.Dispatch<React.SetStateAction<number>>
-    usedSustainTime: number;
-    setSustainTime: React.Dispatch<React.SetStateAction<number>>
     usedSustainGain:number;
     setSustainGain: React.Dispatch<React.SetStateAction<number>>
     usedReleaseTime: number;
@@ -45,14 +43,6 @@ export function Envelope(props : Props) {
             value={props.usedDecayGain}
             max={1}
             min={-1}
-            step={0.01}
-        />
-        <Slider
-            label='Sustain Time'
-            onChange={props.setSustainTime}
-            value={props.usedSustainTime}
-            max={5}
-            min={0.001}
             step={0.01}
         />
         <Slider
