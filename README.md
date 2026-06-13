@@ -1,1 +1,1 @@
-## Réalisé grâce à mon ami Gemini
+avec joie de vivre
